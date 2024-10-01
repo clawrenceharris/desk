@@ -93,14 +93,26 @@ const AuthForm = ({ authType, onSubmit, error, onChange }) => {
             <p>
               Don't have an account?{" "}
               <span>
-                <a href="/signup">Sign up</a>
+                <a
+                  onClick={() => {
+                    navigate("/signup");
+                  }}
+                >
+                  Sign up
+                </a>
               </span>
             </p>
           ) : (
             <p>
               Already have an account?{" "}
               <span>
-                <a href="/login">Log back in</a>
+                <a
+                  onClick={() => {
+                    navigate("/login");
+                  }}
+                >
+                  Log back in
+                </a>
               </span>
             </p>
           )}

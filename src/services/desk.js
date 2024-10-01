@@ -13,19 +13,26 @@ export const createDesk = async (deskId) => {
     });
     return { success: true };
   } catch (error) {
-    console.error("Error creating desk:", error);
-    return { success: false, error: error.message };
+    console.log("Error occurred while creating desk: " + error);
+    throw error;
   }
 };
 export const addDeskItem = async (name, url, uploadedAt) => {
-  const deskData = {
-    name,
-    url,
-    likes: [],
-    description: "",
-    course: "",
-    uploadedAt,
-  };
-  const fileDocRef = doc(collection(db, "desks", AACC_DESK_ID, "desk-items"));
-  await setDoc(fileDocRef, deskData);
+  try {
+    const deskData = {
+      name,
+      url,
+      likes: [],
+      description: "",
+      course: "",
+      uploadedAt,
+    };
+
+    const fileDocRef = doc(collection(db, "desks", AACC_DESK_ID, "desk-items"));
+
+    await setDoc(fileDocRef, deskData);
+  } catch (error) {
+    console.log("Error occurred while creating desk: " + error);
+    throw error;
+  }
 };
