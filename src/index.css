@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+p {
+  font-size: 18px;
+  color: #b5b7b7;
+}
+main {
+  position: relative;
+  display: flex;
+  text-align: center;
+  padding: 35px;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  z-index: 2;
+  min-height: 100vh;
+}
+
+.button {
+  margin: 20px;
+  padding: 10px 30px;
+  font-weight: bold;
+  color: white;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 16px;
+  background-color: #b53ff8;
+  transition: ease 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 15px;
+  flex: 1;
+
+  border: 1px solid rgb(189, 189, 189);
+  background-color: #858b8b;
+  outline: none;
+}
+
+.auth-page {
+  position: relative;
+  background-size: cover;
+  height: 100vh;
+  background-image: url("../src/assets/aacc-bg.png");
+}
