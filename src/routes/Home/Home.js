@@ -1,13 +1,9 @@
-import React from "react";
-import { useAuth } from "../context/AuthContext";
-import { auth } from "../firebase";
-import Header from "../components/Header";
-import { db } from "../firebase";
 import { useEffect, useState } from "react";
-import { doc, getDoc } from "firebase/firestore";
-import Desks from "../components/Desks/Desks";
-import { getData } from "../services/firestore";
-
+import Desks from "../../components/Desks/Desks";
+import Header from "../../components/Header";
+import { useAuth } from "../../context/AuthContext";
+import { getData } from "../../services/firestore";
+import { logOut } from "../../services/auth";
 const HomeScreen = () => {
   const { currentUser } = useAuth(); // Get currentUser data
   const [userData, setUserData] = useState(null);
@@ -36,8 +32,8 @@ const HomeScreen = () => {
 
             <Desks user={userData} />
             <button
-              onClick={(e) => {
-                auth.signOut();
+              onClick={() => {
+                logOut();
               }}
             >
               Log out

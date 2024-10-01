@@ -1,11 +1,11 @@
 import React from "react";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./context/";
-import HomeScreen from "./routes/Home";
 import PrivateRoute from "./components/PrivateRoute";
 import SignUp from "./routes/SignUp/SignUp";
 import LogIn from "./routes/LogIn/LogIn";
 import { Landing } from "./routes/Landing";
+import HomeScreen from "./routes/Home/Home";
 const App = () => {
   return (
     <Router basename={process.env.PUBLIC_URL}>
