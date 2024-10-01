@@ -1,20 +1,9 @@
-import Header from "../Header";
 import "./Desks.css";
-import { useData } from "../../context/DataContext";
-import { db, storage } from "../../firebase";
-import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { useEffect, useState } from "react";
 import { uploadFile } from "../../services/storage";
-import {
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  setDoc,
-  updateDoc,
-} from "firebase/firestore";
 import { AACC_DESK_ID } from "../../constants/";
 import { addDeskItem } from "../../services/desk";
+import { getData } from "../../services/firestore";
 const Desks = ({ user }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [desks, setDesks] = useState([]);
@@ -26,13 +15,12 @@ const Desks = ({ user }) => {
       setLoading(true);
 
       try {
-        const docRef = doc(db, "desks", AACC_DESK_ID);
-        const docSnap = await getDoc(docRef);
+        const docSnap = await getData("desks", AACC_DESK_ID);
 
         if (docSnap.exists()) {
           setDesks([{ id: docSnap.id, ...docSnap.data() }]);
         } else {
-          console.log("No such document!");
+          console.log("Document does not exist");
         }
       } catch (error) {
         console.error("Error fetching desks:", error);
