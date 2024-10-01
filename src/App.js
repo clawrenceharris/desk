@@ -8,7 +8,7 @@ import LogIn from "./pages/LogIn/LogIn";
 import { Landing } from "./pages/Landing";
 const App = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <AuthProvider>
         <Routes>
           <Route path="/" element={<Landing />} />
