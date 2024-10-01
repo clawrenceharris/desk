@@ -1,7 +1,7 @@
 import React from "react";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./context/";
-import HomeScreen from "./routes/Home/Home";
+import HomeScreen from "./routes/Home";
 import PrivateRoute from "./components/PrivateRoute";
 import SignUp from "./routes/SignUp/SignUp";
 import LogIn from "./routes/LogIn/LogIn";

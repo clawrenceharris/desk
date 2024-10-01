@@ -1,12 +1,12 @@
 import React from "react";
-import { useAuth } from "../../context/AuthContext";
-import { auth } from "../../firebase";
-import Header from "../../components/Header";
-import { db } from "../../firebase";
+import { useAuth } from "../context/AuthContext";
+import { auth } from "../firebase";
+import Header from "../components/Header";
+import { db } from "../firebase";
 import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
-import Desks from "../../components/Desks/Desks";
-import { getData } from "../../services/firestore";
+import Desks from "../components/Desks/Desks";
+import { getData } from "../services/firestore";
 
 const HomeScreen = () => {
   const { currentUser } = useAuth(); // Get currentUser data
