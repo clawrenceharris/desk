@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/desk/static/css/main.3c64c88b.css",
-    "main.js": "/desk/static/js/main.48c71869.js",
+    "main.css": "/desk/static/css/main.6a0adcac.css",
+    "main.js": "/desk/static/js/main.176dfc8e.js",
     "static/media/aacc-bg.png": "/desk/static/media/aacc-bg.a78f7e9edd75b574ac72.png",
     "static/media/aacc-logo.png": "/desk/static/media/aacc-logo.ca71e6b3cc72da6cfa4a.png",
     "static/media/aacc-logo-dark.png": "/desk/static/media/aacc-logo-dark.b6b8435fdd4b5bd78547.png",
     "index.html": "/desk/index.html",
-    "main.3c64c88b.css.map": "/desk/static/css/main.3c64c88b.css.map",
-    "main.48c71869.js.map": "/desk/static/js/main.48c71869.js.map"
+    "main.6a0adcac.css.map": "/desk/static/css/main.6a0adcac.css.map",
+    "main.176dfc8e.js.map": "/desk/static/js/main.176dfc8e.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c64c88b.css",
-    "static/js/main.48c71869.js"
+    "static/css/main.6a0adcac.css",
+    "static/js/main.176dfc8e.js"
   ]
 }
